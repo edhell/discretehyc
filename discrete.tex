@@ -11,6 +11,7 @@
 \usepackage{framed}
 \usepackage{enumerate}
 \usepackage{fancyhdr}
+\usepackage{amsmath, amsthm, amssymb}
 
 \makeatletter
  \renewcommand\@seccntformat[1]{\csname  the#1\endcsname.\quad}
@@ -30,8 +31,29 @@
 \subsection{}%5
 \subsection{}%6 **************
 \begin{framed}
-treść
+Wykaż, że  $e^{\frac{1}{n}} = 1 + \frac{1}{n} + O(\frac{1}{n^2})$.
 \end{framed}
+
+\begin{equation}
+e^x = \sum\limits_{i=0}^{+\inf} \frac{x^i}{i!}
+\end{equation}
+
+\begin{equation}
+e^{\frac{1}{n}} = \sum\limits_{i=0}^{+\inf} \frac{ (\frac{1}{n})^i }{i!} = \sum\limits_{i=0}^{+\inf} \frac{1}{i! \cdot n^i} = 1 + \frac{1}{n} + \sum\limits_{i=2}^{+\inf} \frac{1}{i! \cdot n^i} = 1 + \frac{1}{n} + O(\frac{1}{n^2})
+\end{equation}
+
+
+\begin{equation*}
+	\sum\limits_{i=2}^{+\inf} \frac{1}{i! \cdot n^i} \in O(\frac{1}{n^2})
+\end{equation*}
+\begin{proof}
+
+\begin{equation*}
+\sum\limits_{i=2}^{+\inf} \frac{1}{i! \cdot n^i} \leqslant \sum\limits_{i=2}^{+\inf} \frac{1}{2 \cdot n^i} = \frac{1}{2} \cdot \sum\limits_{i=2}^{+\inf} \frac{1}{n^i} = \frac{1}{2} \cdot \frac{ \frac{1}{n} }{ 1 - \frac{1}{n} } = \frac{1}{2 \cdot n \cdot (n-1)} \in O(\frac{1}{n^2})
+\end{equation*}
+
+\end{proof}
+
 
 \subsection{}%7 **************
 \begin{framed}
