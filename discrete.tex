@@ -82,8 +82,30 @@ treść
 
 \subsection{}%14 ***************
 \begin{framed}
-treść
+Pokaż, że dla dowolnego $x \leq 0$:
+$$ \left\lfloor \sqrt{x} \right\rfloor = \left\lfloor \sqrt{ \lfloor x \rfloor} \right\rfloor $$
 \end{framed}
+
+\begin{proof}
+$ \left\lfloor \sqrt{ \lfloor x \rfloor} \right\rfloor = n $ gdzie $ n \in \mathbb{N} $ i $ n \geq 0 $. 
+Z definicji podłogi: 
+$$ n \leq \sqrt{ \lfloor x \rfloor} < n+1 \Leftrightarrow n^2 \leq \lfloor x \rfloor < (n+1)^2 $$
+
+Ponieważ $n^2$ i $(n+1)^2$ są liczbami naturalnymi to w oczywisty sposób zachodzi:
+
+$ n^2 \leq \lfloor x \rfloor \Leftrightarrow n^2 \leq x $, oraz:
+$ \lfloor x \rfloor < (n+1)^2 \Leftrightarrow x <  (n+1)^2$
+
+Zatem:
+$$  n^2 \leq x <  (n+1)^2 $$
+Ponieważ $x > 0$ i $n > 0$, oraz korzystając z definicji podłogi:
+$$  n \leq \sqrt{x} <  n+1 \Leftrightarrow  \left\lfloor \sqrt{ \lfloor x \rfloor} \right\rfloor = n $$
+
+Zatem:
+
+$$ n \leq \sqrt{ \lfloor x \rfloor} < n+1 \Leftrightarrow n^2 \leq \lfloor x \rfloor < (n+1)^2 $$
+
+\end{proof}
 
 \subsection{}%15
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
