@@ -1,0 +1,12 @@
+discrete.log
+.DS_Store
+discrete.aux
+discrete.synctex*
+*.aux
+*.toc
+*.log
+*.dvi
+*.bat
+*.lpr
+*.ps
+*.swp
